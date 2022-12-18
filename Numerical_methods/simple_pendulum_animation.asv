@@ -1,0 +1,35 @@
+%ÓSCAR POBLETE SÁENZ
+clc
+close all
+
+%Declare pendulum variables
+m1=1; %mass
+l1=0.5; %longitude 
+g=9.81; %gravity
+
+%Simulink data into workspace
+q=out.q;
+
+for i=1:length(q)
+   %Firs
+   x1= l1*sin(q(i,2));
+  y1=-l1*cos(q(i,2));
+    plot(0,0,':ob','LineWidth',2,'MarkerSize',10),xlabel('X'),ylabel('Y'), title('Pendulo doble'),grid on
+    %Especificaciones de los ejes
+    axis([-2.2 2.2 -2.2 2.2])
+    %Agregamos titulo
+    title('PENDULO DOBLE')
+    %Mantenemos la grafica
+    hold on
+    %Graficamos la primer masa
+    plot(l1*sin(q(i,2)),-l1*cos(q(i,2)),'ok','LineWidth',2,'MarkerSize',10,'MarkerFaceColor','k')
+    %Graicamos la primera barra
+    plot([0, x1], [0 y1],'r','LineWidth',6)
+    hold off
+  
+    pause(1e-1)
+end
+ % legend('ENERGIA TOTAL','Energia Cinetica','energia potencial');
+%toc
+
+
