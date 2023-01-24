@@ -5,7 +5,7 @@ a=input('Give me a number :')
 
 %Rem= remainder of a division
 if rem(a,2)==0
-    disp('The number is pair')
+    disp('The number is even')
 else
     disp('The number is odd')
 end
