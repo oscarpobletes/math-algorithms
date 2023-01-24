@@ -1,8 +1,8 @@
 %ÓSCAR POBLETE SÁENZ
 %Given a range, recognize prime numbers and detect which ones are odd and even.
 
-a=input('Dame un número: '); %ask user for range
-q = ['Los numeros primos del 2 al numero dado son:'];
+a=input('Give me a number: '); %ask user for range
+q = ['The prime numbers from 2 to the given number are:'];
 disp(q)
 %Rem= remainder of a division
 for x=2:a %We go from 2 to the given number
@@ -12,11 +12,11 @@ for x=2:a %We go from 2 to the given number
             divi=1; %is not prime
         end
     end
-  if divi==0 && rem(x,2)==0 %Check if it is prime and pair
-     par=[num2str(x), ' es primo y par'];
-     disp(par) %Imprimimos resultado
+  if divi==0 && rem(x,2)==0 %Check if it is prime and even
+     par=[num2str(x), ' It is prime and even'];
+     disp(par) %Print result
   else if divi==0 &&rem(x,2)not(0); %Check if it is prime and odd
-    impar=[num2str(x), ' es primo e impar'];
+    impar=[num2str(x), ' It is prime and odd'];
     disp(impar) %Print result
   end
   end
